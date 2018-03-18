@@ -1,0 +1,737 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{Introduction to python}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    Table of Contents{}
+
+{{1~~}What is Python?}
+
+{{2~~}Why Python?}
+
+{{2.1~~}Easyness}
+
+{{2.1.1~~}Example: Date-Time Program}
+
+{{2.2~~}Flexibility}
+
+{{2.3~~}Popularity}
+
+{{2.4~~}Community}
+
+{{3~~}Python Getting Started}
+
+{{3.1~~}Python 2.7 vs Python 3.6}
+
+{{4~~}Python Installation.}
+
+{{5~~}Python Simple Calculator.}
+
+{{6~~}Python text editors and IDEs.}
+
+{{7~~}References and Useful Resources.}
+
+    \subsection{What is Python?}\label{what-is-python}
+
+    Python is an interpreted, high-level, programming language. It contains
+many high level built-in functions and data structures. Its name comes
+from \textbf{Monty Python} British comedy group. Python emphasizes on
+code readability and rapid development. There are many features in the
+language elaborating this characteristics such as \textbf{dynamic
+typing, indentation, useful keywords naming}. These terms will be clear
+in the upcoming sections of this document.
+
+    \subsection{Why Python?}\label{why-python}
+
+    There are many competitive programming languages that are leading the
+commercial market nowadays. What is so special about python such that I
+will , as a engineer, developer or even a user, choose python for my
+next project? Well, this is a fair enough question to ask. The following
+points will show Python potential and proficiency.
+
+    \subsubsection{Easyness}\label{easyness}
+
+    Python, as a rumor, was intended to target kids to make the concept of
+programming easy for them. However, it scales up such that Nasa is using
+it in its projects! Python syntax is interestingly easy to learn and
+understand. The code is, probably, the most readable among all its
+counterparts. The following example elaborates that. It is a program to
+show the current day, time.
+
+    \paragraph{Example: Date-Time Program}\label{example-date-time-program}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}32}]:} \PY{k+kn}{from} \PY{n+nn}{datetime} \PY{k}{import} \PY{n}{datetime}
+         
+         \PY{n}{now} \PY{o}{=} \PY{n}{datetime}\PY{o}{.}\PY{n}{now}\PY{p}{(}\PY{p}{)}
+         
+         \PY{n}{mm} \PY{o}{=} \PY{n+nb}{str}\PY{p}{(}\PY{n}{now}\PY{o}{.}\PY{n}{month}\PY{p}{)}
+         
+         \PY{n}{dd} \PY{o}{=} \PY{n+nb}{str}\PY{p}{(}\PY{n}{now}\PY{o}{.}\PY{n}{day}\PY{p}{)}
+         
+         \PY{n}{yyyy} \PY{o}{=} \PY{n+nb}{str}\PY{p}{(}\PY{n}{now}\PY{o}{.}\PY{n}{year}\PY{p}{)}
+         
+         \PY{n}{hour} \PY{o}{=} \PY{n+nb}{str}\PY{p}{(}\PY{n}{now}\PY{o}{.}\PY{n}{hour}\PY{p}{)}
+         
+         \PY{n}{mi} \PY{o}{=} \PY{n+nb}{str}\PY{p}{(}\PY{n}{now}\PY{o}{.}\PY{n}{minute}\PY{p}{)}
+         
+         \PY{n}{ss} \PY{o}{=} \PY{n+nb}{str}\PY{p}{(}\PY{n}{now}\PY{o}{.}\PY{n}{second}\PY{p}{)}
+         
+         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{date of today is: }\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n+nb}{print} \PY{p}{(}\PY{n}{mm} \PY{o}{+} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{/}\PY{l+s+s2}{\PYZdq{}} \PY{o}{+} \PY{n}{dd} \PY{o}{+} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{/}\PY{l+s+s2}{\PYZdq{}} \PY{o}{+} \PY{n}{yyyy} 
+                \PY{o}{+} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{ }\PY{l+s+s2}{\PYZdq{}} \PY{o}{+} \PY{n}{hour} \PY{o}{+} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{:}\PY{l+s+s2}{\PYZdq{}} \PY{o}{+} \PY{n}{mi} \PY{o}{+} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{:}\PY{l+s+s2}{\PYZdq{}} \PY{o}{+} \PY{n}{ss}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+date of today is: 
+3/18/2018 22:55:22
+
+    \end{Verbatim}
+
+    \subsubsection{Flexibility}\label{flexibility}
+
+    \begin{itemize}
+\tightlist
+\item
+  \textbf{Python Characteristics:} Python scripts are dynamically typed.
+  Meaning that, the programmer needs not to explicitly define the type
+  of the variable to be used. This is a great increase in readability
+  and decrease of time cost in programming. Adding to that, Python
+  provides the programmer many methods to solve a particular problem
+  increasing programmers to develop programming flavors. Moreover,
+  Python supports Object-Oriented Programming "OOP". This is a modern
+  concept applied in the leading programming languages such as C++, C\#,
+  Java and, of course, Python. It is used to modularize and encapsulate
+  data types and their specific operations. It will be extrapolated
+  later in this tutorial documents.
+\end{itemize}
+
+    \begin{itemize}
+\tightlist
+\item
+  \textbf{Portability:} Code written in C will produce .exe file when
+  compiled. That file will execute only on a windows machines. Same thin
+  is happening for mac machines. Nevertheless, Java breaks this rule by
+  its smart idea: Java Virtual Machine. Using this feature, you can
+  write Java program and run it on Windows or Mac machine using this
+  feature. Python follows the same rule. Python scripts can be running
+  on any platform.
+\end{itemize}
+
+    \begin{itemize}
+\tightlist
+\item
+  \textbf{Python frameworks:} Python frameworks are python scripts and
+  modules helping the programmer to develop their applications on many
+  platforms. The following points are just examples of \emph{what you
+  can do with python}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Web Development There are many libraries and frameworks letting you
+    to develop web applications using your favourite programming
+    language: \emph{Python}! Such frameworks are Django, Flusk,
+    Pyramids.
+  \item
+    Data Analysis Data analysis is a giant part of python frameworks and
+    libraries. Day to day, data is becoming the new gold of this
+    century. Python is a leading software in this field. Many so popular
+    and robust libraries are written in Python such as Numpy, Pandas,
+    Sciypy and the library of Data Visualization Matplotlib. We may
+    going a little bit deeper in this tutorial as we are going to study
+    Python as a good alternative for Matlab.
+  \item
+    Machine Learning Machine learning is the formal name given to the
+    field of extracting useful information out of the data. This field
+    is well-known for its huge computation and time-machinery
+    expensiveness. It also requires the programming to know, in-deep,
+    many mathematical concepts such as probability, calculus and linear
+    algebra. Python has many frame works utilizing this work for the
+    programmer. The programmer needs not to be fully knowledgeable about
+    such complicated stuff. These frameworks are NLTK for natural
+    language processing, Tensorflow for building Artificial Neural
+    Networks, and Scikit-learn for machine learning algorithms.
+  \item
+    Computer Vision. OpenCV with Python. Computer Vision, in simple
+    words, interested in image manipulation, detection and recognition.
+    All these fancy words are given this neat name, Image Processing.
+    Many interesting areas are falling inside this field such as face
+    detection and face recognition. These are part of Computer Vision
+    which connects all these components altogether and they all falls
+    under the machine learning and AI umbrella. Python has nice module
+    implementations regarding this topics. OpenCV is an excellent
+    example.
+  \item
+    GUI Development. Python, just like any other programming language,
+    provides libraries to write GUI applications. GUI stands for
+    Graphical User Interface which is the window you see when you start
+    any desktop application. pyqt, Tkinter and Jython are examples of
+    such libraries. There is also a \_ Game Development \_ python
+    library known as pygame that can run on Android system as well.
+  \end{itemize}
+\end{itemize}
+
+    \subsubsection{Popularity}\label{popularity}
+
+    Python is widely used in many applications that are maintained and
+developed using the giant computing and software companies in the world
+such as Google, Facebook, Amazon etc. Youtube, Google, Quora, Instagram,
+Spotify, Reddit, Pinterest, and Prezi websites are completely or
+partially powered by Python. Python is the 4th Most-Used Language at
+Github "Github is a coding projects websites where programmers use to
+save their codes online". If Python was useless or was not a
+cutting-edge technology providing integrated features, these large
+companies will no rely on it to build their websites.
+
+    \subsubsection{Community}\label{community}
+
+    Python has a large community over the world. There is an annual
+conference for python developers called
+\href{https://www.pycon.org/}{PyCon}. The link:(https://www.pycon.org/).
+
+Python also has a great community support at stackoverflow.com. The
+website for programmers. It is the 5th largest community on the site
+according to{[}6{]}. You will not be misled. Moreover, any question you
+post on this site about python, it is the 3rd most likely to be answered
+when compared to other popular programming languages.
+
+    \subsection{Python Getting Started}\label{python-getting-started}
+
+    \subsubsection{Python 2.7 vs Python 3.6}\label{python-2.7-vs-python-3.6}
+
+    Python 2.7 and Python 3.6 are two main versions of Python. Python start
+a new software with different criteras after Python 2.7 version. There
+are numerous differences between the two versions summarized in {[}7{]}.
+We will be exposed to these differences when appropriate. For this
+tutorial, we will be using Python 3.6.
+
+    Starting with the first difference, Python \texttt{print} statement is
+changed from 2.7 to 3.x. in python 2.7, It was like the following:
+
+\texttt{print\ \textquotesingle{}hello\ world\textquotesingle{}}
+
+However, in python 3.6 it changes to:
+
+\texttt{print(\textquotesingle{}hello\ world\textquotesingle{})}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}33}]:} \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{hello world}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+hello world
+
+    \end{Verbatim}
+
+    \subsection{Python Installation.}\label{python-installation.}
+
+    Python can be installed from their official website:
+https://www.python.org/downloads/. There will be two illuminating
+buttons at the header of the page for the two versions of python. You
+may choose Python 3.6 to download.
+
+After clicking this button, a compressed file will start downloading.
+Once it completes downloading, you can install it as usual.
+
+    \subsection{Python Simple Calculator.}\label{python-simple-calculator.}
+
+    To run python, open the command line software on you OS and type python.
+Now, you can write python scripts on the command line. I know that this
+is an ugly user interface. Nevertheless, we will have more fancy choices
+later. Try the following simple command to test language functionality:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}34}]:} \PY{n+nb}{print} \PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Hello world}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Hello world
+
+    \end{Verbatim}
+
+    Here, we are going to perform simple calculations. These calculations
+may let you consider python as an alternative calculator of your OS one.
+Try it, It is amazing!
+
+    \textbf{Tips}:
+
+\begin{itemize}
+\tightlist
+\item
+  Python provides two methods of writing comments:
+\end{itemize}
+
+\texttt{\#\ This\ is\ a\ line\ comment}
+
+\texttt{\textquotesingle{}\textquotesingle{}\textquotesingle{}\ This\ is\ block\ comment\textquotesingle{}\textquotesingle{}\textquotesingle{}}
+
+\begin{itemize}
+\tightlist
+\item
+  Unlike many popular programming languages, Python uses indentation
+  rather than semi-colon. This will be explained later.
+\end{itemize}
+
+    The following operators are used: - \texttt{*} for multiplication. -
+\texttt{+} for addition. - \texttt{-} for subtraction. - \texttt{/} for
+division. - \texttt{//} for integer division. - \texttt{**} for power.
+
+Note that in \emph{Python 2.7}, \texttt{/} and \texttt{//} are both used
+for integer division. To save, the decimal part while performing
+division, one needs to put .0 on one of the operands like
+\texttt{11/2.0}.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}35}]:} \PY{c+c1}{\PYZsh{} this is a line comment}
+         \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+         \PY{l+s+sd}{This is a block comment!}
+         \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}35}]:} '\textbackslash{}nThis is a block comment!\textbackslash{}n'
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}36}]:} \PY{c+c1}{\PYZsh{} Some Calculations:}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}37}]:} \PY{l+m+mi}{10}\PY{o}{\PYZhy{}}\PY{l+m+mi}{5}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}37}]:} 5
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}38}]:} \PY{l+m+mi}{10}\PY{o}{+}\PY{l+m+mi}{5}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}38}]:} 15
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}39}]:} \PY{l+m+mi}{5}\PY{o}{\PYZhy{}}\PY{l+m+mi}{10}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}39}]:} -5
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}40}]:} \PY{l+m+mi}{10}\PY{o}{*}\PY{l+m+mi}{5}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}40}]:} 50
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}41}]:} \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+         \PY{l+s+sd}{notice that / returns a real value }
+         \PY{l+s+sd}{while // returns an integer value where the decimal part is truncrated.}
+         \PY{l+s+sd}{\PYZsq{}\PYZsq{}\PYZsq{}}
+         \PY{l+m+mi}{11}\PY{o}{/}\PY{l+m+mi}{5}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}41}]:} 2.2
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}42}]:} \PY{l+m+mi}{11}\PY{o}{/}\PY{o}{/}\PY{l+m+mi}{5}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}42}]:} 2
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}43}]:} \PY{l+m+mi}{2}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{3}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}43}]:} 8
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}44}]:} \PY{l+m+mi}{2}\PY{o}{*}\PY{o}{*}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}44}]:} 0.125
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}45}]:} \PY{l+m+mi}{4}\PY{o}{*}\PY{o}{*}\PY{l+m+mf}{0.5}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}45}]:} 2.0
+\end{Verbatim}
+            
+    \subsection{Python text editors and
+IDEs.}\label{python-text-editors-and-ides.}
+
+    As we agreed above, we will present in this section some text editors
+that are definitely best substitutions of the ugly command line
+interface.
+
+The list goes below:
+
+    \begin{itemize}
+\tightlist
+\item
+  \textbf{Visual Studio Code.}
+\item
+  \textbf{Atom.}
+\item
+  \textbf{Notepad++.}
+\item
+  \textbf{Sublime text.}
+\item
+  \textbf{Emacs.}
+\item
+  \textbf{Wing IDE.}
+\item
+  \textbf{PyCharm IDE.}
+\end{itemize}
+
+    Moreover, we can use \textbf{Jupyter Notebook} for writing documents
+with code that can be exported later to a \(LaTeX\) document. This
+technology is available under \emph{Anaconda} distribution and will be
+discussed later.
+
+    \subsection{References and Useful
+Resources.}\label{references-and-useful-resources.}
+
+    1- \href{https://www.python.org/doc/essays/blurb/}{What is python?}.
+Python official website: https://www.python.org/doc/essays/blurb/
+
+2-
+\href{http://www.pythonforbeginners.com/code-snippets-source-code/python-code-examples}{Python
+code examples}, The website is:
+http://www.pythonforbeginners.com/code-snippets-source-code/python-code-examples
+
+3- \href{https://www.youtube.com/watch?v=hxGB7LU4i1I}{What can you do
+with python}. The link to this Youtube videw is:
+https://www.youtube.com/watch?v=hxGB7LU4i1I.
+
+4- \href{https://www.python.org/about/apps/}{Applications for Python}.
+The link is: https://www.python.org/about/apps/. It is from the official
+python website.
+
+5-
+\href{https://www.shuup.com/blog/25-of-the-most-popular-python-and-django-websites/}{Top
+25 most popular websites built with python} The link to this blog is:
+https://www.shuup.com/blog/25-of-the-most-popular-python-and-django-websites/.
+
+6- \href{http://www.bestprogramminglanguagefor.me/why-learn-python}{why
+to learn python} link:
+http://www.bestprogramminglanguagefor.me/why-learn-python.
+
+7-
+\href{http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html}{key
+differences between Python2.7 and Python 3.6}. The link to the blog is:
+http://sebastianraschka.com/Articles/2014\_python\_2\_3\_key\_diff.html
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}

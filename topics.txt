@@ -1,0 +1,37 @@
+These are tentitive topics we are going to cover in this toturial.
+
+Week 1:
+    Introduction to python:
+        - What is pyhton?
+        - Scripting languages cs Compiled languages.
+        - Why Python?
+        - Python getting started.
+        - Python Installation.
+        - Python simple calculator.
+        - Python IDEs.
+        - Resources.
+
+Week 2:
+    Coding with python 1:
+        - Python primitive data types.
+        - Python data structures[Tuples, Lists, Dicts].
+        - Python control flow statements.
+        - Python branching and Iteratoin.
+        - Resources.
+        
+Week 3:
+    Coding with Python 2:
+        - Python modules.
+        - Python as OOP.
+        - Python input and output.
+        - Python errors and exceptions.
+        - Resources.
+
+Week 4,5,6:
+    Python GUIs.
+    Python Distriputions.
+    IPython notebook.
+    Data Analysis with Python.
+    Python matplotlib.
+    Python with excel.
+    
