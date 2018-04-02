@@ -14,6 +14,7 @@ Week 1:
 Week 2:
     Coding with python 1:
         - Python primitive data types.
+        - Python Operators.
         - Python data structures[Tuples, Lists, Dicts].
         - Python control flow statements.
         - Python branching and Iteratoin.
