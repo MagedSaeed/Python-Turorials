@@ -352,179 +352,317 @@ https://www.programiz.com/python-programming/modules/math}. \emph{Some
 functions in the original table are not in this table. Go there for more
 functions}
 
-    \begin{verbatim}
-<caption>List of Functions in Python Math Module</caption>
-<tbody>
-    <tr>
-        <th style="text-align:left">Function</th>
-        <th style="text-align:left">Description</th>
-    </tr>
-    <tr>
-        <td style="text-align:left">ceil(x)</td>
-        <td style="text-align:left">Returns the smallest integer greater than or equal to x.</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">copysign(x, y)</td>
-        <td style="text-align:left">Returns x with the sign of y</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">fabs(x)</td>
-        <td style="text-align:left">Returns the absolute value of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">factorial(x)</td>
-        <td style="text-align:left">Returns the factorial of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">floor(x)</td>
-        <td style="text-align:left">Returns the largest integer less than or equal to x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">fmod(x, y)</td>
-        <td style="text-align:left">Returns the remainder when x is divided by y</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">isinf(x)</td>
-        <td style="text-align:left">Returns True if x is a positive or negative infinity</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">modf(x)</td>
-        <td style="text-align:left">Returns the fractional and integer parts of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">trunc(x)</td>
-        <td style="text-align:left">Returns the truncated integer value of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">exp(x)</td>
-        <td style="text-align:left">Returns e**x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">log(x[, base])</td>
-        <td style="text-align:left">Returns the logarithm of x to the base (defaults to e)</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">log2(x)</td>
-        <td style="text-align:left">Returns the base-2 logarithm of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">log10(x)</td>
-        <td style="text-align:left">Returns the base-10 logarithm of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">pow(x, y)</td>
-        <td style="text-align:left">Returns x raised to the power y</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">sqrt(x)</td>
-        <td style="text-align:left">Returns the square root of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">acos(x)</td>
-        <td style="text-align:left">Returns the arc cosine of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">asin(x)</td>
-        <td style="text-align:left">Returns the arc sine of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">atan(x)</td>
-        <td style="text-align:left">Returns the arc tangent of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">atan2(y, x)</td>
-        <td style="text-align:left">Returns atan(y / x)</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">cos(x)</td>
-        <td style="text-align:left">Returns the cosine of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">sin(x)</td>
-        <td style="text-align:left">Returns the sine of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">tan(x)</td>
-        <td style="text-align:left">Returns the tangent of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">degrees(x)</td>
-        <td style="text-align:left">Converts angle x from radians to degrees</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">radians(x)</td>
-        <td style="text-align:left">Converts angle x from degrees to radians</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">acosh(x)</td>
-        <td style="text-align:left">Returns the inverse hyperbolic cosine of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">asinh(x)</td>
-        <td style="text-align:left">Returns the inverse hyperbolic sine of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">atanh(x)</td>
-        <td style="text-align:left">Returns the inverse hyperbolic tangent of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">cosh(x)</td>
-        <td style="text-align:left">Returns the hyperbolic cosine of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">sinh(x)</td>
-        <td style="text-align:left">Returns the hyperbolic cosine of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">tanh(x)</td>
-        <td style="text-align:left">Returns the hyperbolic tangent of x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">erf(x)</td>
-        <td style="text-align:left">Returns the error function at x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">erfc(x)</td>
-        <td style="text-align:left">Returns the complementary error function at x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">gamma(x)</td>
-        <td style="text-align:left">Returns the Gamma function at x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">lgamma(x)</td>
-        <td style="text-align:left">Returns the natural logarithm of the absolute value of the Gamma function at x</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">pi</td>
-        <td style="text-align:left">Mathematical constant, the ratio of circumference of a circle to it&#39;s diameter (3.14159...)</td>
-    </tr>
-    <tr>
-        <td style="text-align:left">e</td>
-        <td style="text-align:left">mathematical constant e (2.71828...)</td>
-    </tr>
-</tbody>
-\end{verbatim}
+    \textbf{List of Functions in Python Math Module}
+
+\begin{itemize}
+\tightlist
+\item
+  ceil(x)
+\end{itemize}
+
+Returns the smallest integer greater than or equal to x.
+
+\begin{itemize}
+\tightlist
+\item
+  copysign(x, y)
+\end{itemize}
+
+Returns x with the sign of y
+
+\begin{itemize}
+\tightlist
+\item
+  fabs(x)
+\end{itemize}
+
+Returns the absolute value of x
+
+\begin{itemize}
+\tightlist
+\item
+  factorial(x)
+\end{itemize}
+
+Returns the factorial of x
+
+\begin{itemize}
+\tightlist
+\item
+  floor(x)
+\end{itemize}
+
+Returns the largest integer less than or equal to x
+
+\begin{itemize}
+\tightlist
+\item
+  fmod(x, y)
+\end{itemize}
+
+Returns the remainder when x is divided by y
+
+\begin{itemize}
+\tightlist
+\item
+  isinf(x)
+\end{itemize}
+
+Returns True if x is a positive or negative infinity
+
+\begin{itemize}
+\tightlist
+\item
+  modf(x)
+\end{itemize}
+
+Returns the fractional and integer parts of x
+
+\begin{itemize}
+\tightlist
+\item
+  trunc(x)
+\end{itemize}
+
+Returns the truncated integer value of x
+
+\begin{itemize}
+\tightlist
+\item
+  exp(x)
+\end{itemize}
+
+Returns e**x
+
+\begin{itemize}
+\tightlist
+\item
+  log(x{[}, base{]})
+\end{itemize}
+
+Returns the logarithm of x to the base (defaults to e)
+
+\begin{itemize}
+\tightlist
+\item
+  log2(x)
+\end{itemize}
+
+Returns the base-2 logarithm of x
+
+\begin{itemize}
+\tightlist
+\item
+  log10(x)
+\end{itemize}
+
+Returns the base-10 logarithm of x
+
+\begin{itemize}
+\tightlist
+\item
+  pow(x, y)
+\end{itemize}
+
+Returns x raised to the power y
+
+\begin{itemize}
+\tightlist
+\item
+  sqrt(x)
+\end{itemize}
+
+Returns the square root of x
+
+\begin{itemize}
+\tightlist
+\item
+  acos(x)
+\end{itemize}
+
+Returns the arc cosine of x
+
+\begin{itemize}
+\tightlist
+\item
+  asin(x)
+\end{itemize}
+
+Returns the arc sine of x
+
+\begin{itemize}
+\tightlist
+\item
+  atan(x)
+\end{itemize}
+
+Returns the arc tangent of x
+
+\begin{itemize}
+\tightlist
+\item
+  atan2(y, x)
+\end{itemize}
+
+Returns atan(y / x)
+
+\begin{itemize}
+\tightlist
+\item
+  cos(x)
+\end{itemize}
+
+Returns the cosine of x
+
+\begin{itemize}
+\tightlist
+\item
+  sin(x)
+\end{itemize}
+
+Returns the sine of x
+
+\begin{itemize}
+\tightlist
+\item
+  tan(x)
+\end{itemize}
+
+Returns the tangent of x
+
+\begin{itemize}
+\tightlist
+\item
+  degrees(x)
+\end{itemize}
+
+Converts angle x from radians to degrees
+
+\begin{itemize}
+\tightlist
+\item
+  radians(x)
+\end{itemize}
+
+Converts angle x from degrees to radians
+
+\begin{itemize}
+\tightlist
+\item
+  acosh(x)
+\end{itemize}
+
+Returns the inverse hyperbolic cosine of x
+
+\begin{itemize}
+\tightlist
+\item
+  asinh(x)
+\end{itemize}
+
+Returns the inverse hyperbolic sine of x
+
+\begin{itemize}
+\tightlist
+\item
+  atanh(x)
+\end{itemize}
+
+Returns the inverse hyperbolic tangent of x
+
+\begin{itemize}
+\tightlist
+\item
+  cosh(x)
+\end{itemize}
+
+Returns the hyperbolic cosine of x
+
+\begin{itemize}
+\tightlist
+\item
+  sinh(x)
+\end{itemize}
+
+Returns the hyperbolic cosine of x
+
+\begin{itemize}
+\tightlist
+\item
+  tanh(x)
+\end{itemize}
+
+Returns the hyperbolic tangent of x
+
+\begin{itemize}
+\tightlist
+\item
+  erf(x)
+\end{itemize}
+
+Returns the error function at x
+
+\begin{itemize}
+\tightlist
+\item
+  erfc(x)
+\end{itemize}
+
+Returns the complementary error function at x
+
+\begin{itemize}
+\tightlist
+\item
+  gamma(x)
+\end{itemize}
+
+Returns the Gamma function at x
+
+\begin{itemize}
+\tightlist
+\item
+  lgamma(x)
+\end{itemize}
+
+Returns the natural logarithm of the absolute value of the Gamma
+function at x
+
+\begin{itemize}
+\tightlist
+\item
+  pi
+\end{itemize}
+
+Mathematical constant, the ratio of circumference of a circle to it's
+diameter (3.14159...)
+
+\begin{itemize}
+\tightlist
+\item
+  e
+\end{itemize}
+
+mathematical constant e (2.71828...)
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}15}]:} \PY{c+c1}{\PYZsh{} Most of these functions are in the math module.}
-         \PY{c+c1}{\PYZsh{} we need to import that moduel in order to use them.}
-         \PY{k+kn}{import} \PY{n+nn}{math}
-         \PY{n}{x} \PY{o}{=} \PY{l+m+mi}{2048}
-         \PY{n}{y} \PY{o}{=} \PY{l+m+mi}{7}
-         \PY{n}{z} \PY{o}{=} \PY{l+m+mf}{1.25}
-         \PY{n}{w} \PY{o}{=} \PY{l+m+mf}{1.75}
-         
-         \PY{n+nb}{print}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{ceil}\PY{p}{(}\PY{n}{z}\PY{p}{)}\PY{p}{)}
-         \PY{n+nb}{print}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{floor}\PY{p}{(}\PY{n}{z}\PY{p}{)}\PY{p}{)}
-         \PY{n+nb}{print}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{modf}\PY{p}{(}\PY{n}{z}\PY{p}{)}\PY{p}{)}
-         \PY{n+nb}{print}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{factorial}\PY{p}{(}\PY{n}{y}\PY{p}{)}\PY{p}{)}
-         \PY{n+nb}{print}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{log2}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}
-         \PY{n+nb}{print}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{e}\PY{p}{)}\PY{p}{)} \PY{c+c1}{\PYZsh{} e\PYZca{}e}
-         \PY{n+nb}{print}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{pi}\PY{o}{*}\PY{n}{math}\PY{o}{.}\PY{n}{pow}\PY{p}{(}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)} \PY{c+c1}{\PYZsh{} pi * 7\PYZca{}2}
-         \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{round}\PY{p}{(}\PY{n}{z}\PY{p}{)}\PY{p}{)}
-         \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{round}\PY{p}{(}\PY{n}{w}\PY{p}{)}\PY{p}{)}
-         \PY{n+nb}{print}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{w}\PY{p}{)}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}125}]:} \PY{c+c1}{\PYZsh{} Most of these functions are in the math module.}
+          \PY{c+c1}{\PYZsh{} we need to import that moduel in order to use them.}
+          \PY{k+kn}{import} \PY{n+nn}{math}
+          \PY{n}{x} \PY{o}{=} \PY{l+m+mi}{2048}
+          \PY{n}{y} \PY{o}{=} \PY{l+m+mi}{7}
+          \PY{n}{z} \PY{o}{=} \PY{l+m+mf}{1.25}
+          \PY{n}{w} \PY{o}{=} \PY{l+m+mf}{1.75}
+          
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{ceil}\PY{p}{(}\PY{n}{z}\PY{p}{)}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{floor}\PY{p}{(}\PY{n}{z}\PY{p}{)}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{modf}\PY{p}{(}\PY{n}{z}\PY{p}{)}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{factorial}\PY{p}{(}\PY{n}{y}\PY{p}{)}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{log2}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{exp}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{e}\PY{p}{)}\PY{p}{)} \PY{c+c1}{\PYZsh{} e\PYZca{}e}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{pi}\PY{o}{*}\PY{n}{math}\PY{o}{.}\PY{n}{pow}\PY{p}{(}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)} \PY{c+c1}{\PYZsh{} pi * 7\PYZca{}2}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{round}\PY{p}{(}\PY{n}{z}\PY{p}{)}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{round}\PY{p}{(}\PY{n}{w}\PY{p}{)}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{math}\PY{o}{.}\PY{n}{sqrt}\PY{p}{(}\PY{n}{w}\PY{p}{)}\PY{p}{)}
 \end{Verbatim}
 
 
@@ -651,45 +789,29 @@ string is indexed by 0.} \emph{Remember that} indexing a string with a
 greater, or lower, number will fire a python error!
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}27}]:} \PY{c+c1}{\PYZsh{} the value of variable a is \PYZdq{}this is string\PYZdq{} from the previous runnable cell.}
-         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{the sixth character of }\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{a}\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{ string is:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{]}\PY{p}{)}
-         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{the first character of }\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{a}\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{ string is:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
-         
-         \PY{c+c1}{\PYZsh{} here we will print the last element of the string.}
-         \PY{c+c1}{\PYZsh{} by using len() function, it is not necessary to know the length of the string.}
-         \PY{c+c1}{\PYZsh{} we need to subtract it by one becuase of the first index which is ZERO.}
-         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{The last character of }\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{a}\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{ is: }\PY{l+s+s2}{\PYZdq{}}\PY{o}{+}\PY{n}{a}\PY{p}{[}\PY{n+nb}{len}\PY{p}{(}\PY{n}{a}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
-         
-         \PY{c+c1}{\PYZsh{} We may use floor() function with len() to get the middle element of the string as well}
-         \PY{c+c1}{\PYZsh{} remember that we cannot use float \PYZdq{}real\PYZdq{} numbers to index string. Integers are only allowed.}
-         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{the middle character of }\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{a}\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{ is:}\PY{l+s+s2}{\PYZdq{}}\PY{o}{+}\PY{n}{a}\PY{p}{[}\PY{n}{math}\PY{o}{.}\PY{n}{floor}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{a}\PY{p}{)}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{]}\PY{p}{)}
-         
-         \PY{c+c1}{\PYZsh{} this code will fire an error:}
-         \PY{n+nb}{print}\PY{p}{(}\PY{n}{a}\PY{p}{[}\PY{n+nb}{len}\PY{p}{(}\PY{n}{a}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}117}]:} \PY{c+c1}{\PYZsh{} the value of variable a is \PYZdq{}this is string\PYZdq{} from the previous runnable cell.}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{the sixth character of }\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{a}\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{ string is:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{]}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{the first character of }\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{a}\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{ string is:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{a}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} here we will print the last element of the string.}
+          \PY{c+c1}{\PYZsh{} by using len() function, it is not necessary to know the length of the string.}
+          \PY{c+c1}{\PYZsh{} we need to subtract it by one becuase of the first index which is ZERO.}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{The last character of }\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{a}\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{ is: }\PY{l+s+s2}{\PYZdq{}}\PY{o}{+}\PY{n}{a}\PY{p}{[}\PY{n+nb}{len}\PY{p}{(}\PY{n}{a}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} We may use floor() function with len() to get the middle element of the string as well}
+          \PY{c+c1}{\PYZsh{} remember that we cannot use float \PYZdq{}real\PYZdq{} numbers to index string. Integers are only allowed.}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{the middle character of }\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{a}\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{ is:}\PY{l+s+s2}{\PYZdq{}}\PY{o}{+}\PY{n}{a}\PY{p}{[}\PY{n}{math}\PY{o}{.}\PY{n}{floor}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{a}\PY{p}{)}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} this code will fire an error:}
+          \PY{c+c1}{\PYZsh{}print(a[len(a)])}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
 the sixth character of 'a' string is: i
 the first character of 'a' string is: t
-The last character of 'a' is: g
-the middle character of 'a' is:a
-
-    \end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-
-        ---------------------------------------------------------------------------
-
-        IndexError                                Traceback (most recent call last)
-
-        <ipython-input-27-6ba032e945d5> in <module>()
-         13 
-         14 \# this code will fire an error:
-    ---> 15 print(a[len(a)])
-    
-
-        IndexError: string index out of range
+The last character of 'a' is: !
+the middle character of 'a' is:c
 
     \end{Verbatim}
 
@@ -712,14 +834,13 @@ the second to last char is: n
 
     \end{Verbatim}
 
-    The following picture is taken from Google developers website and gives
-a good description about the indexes. I just copy and paste the image
-into the following cell.
+    Figure 1 is taken from Google developers website and gives a good
+description about that kind of indexes. I just copy and paste the image.
 
     \begin{figure}
 \centering
-\includegraphics{attachment:image.png}
-\caption{image.png}
+\includegraphics{hello.png}
+\caption{Figure 1}
 \end{figure}
 
     \begin{itemize}
@@ -773,9 +894,10 @@ python can use the default values. (i.e {[} : : {]}). - defalut value
 for \textbf{start} is 0. - default value for \textbf{stop} is
 \emph{len()}. - default value for \textbf{step} is 1. - negative indexes
 are allowed. - {[} : : -1{]} will flip the defaults to: {[}-1:
--(len()+1):-1{]}. Simply, it will reverse the string. - If negative
-numbers are used in the \textbf{step}, then \textbf{start} must be
-greater than stop and the other way around for positive numbers.
+-(len()+1):-1{]}. Simply, it will reverse the string because it will
+start from the last element up to the first one. - If negative numbers
+are used in the \textbf{step}, then \textbf{start} must be greater than
+stop and the other way around for positive numbers.
 
     \begin{Verbatim}[commandchars=\\\{\}]
 {\color{incolor}In [{\color{incolor}43}]:} \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{this is }\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{a}\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{ string:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{a}\PY{p}{)}
@@ -792,6 +914,53 @@ greater than stop and the other way around for positive numbers.
 this is 'a' string: this is a string
 this is a string
 gnirts a si siht
+
+    \end{Verbatim}
+
+    \begin{itemize}
+\tightlist
+\item
+  \textbf{Split}
+\end{itemize}
+
+    You can split a given string into a list of strings based on a given
+delimiter. Suppose that I want to get all the words separated by a space
+from a string, then this function is useful. Do not worry about the word
+\texttt{list} will talk about it later.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}118}]:} \PY{n}{a} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{This is a string!!}\PY{l+s+s2}{\PYZdq{}}
+          \PY{c+c1}{\PYZsh{} if there is nothing passed to the funtion,}
+          \PY{c+c1}{\PYZsh{}then the default is the white sapce.}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{a}\PY{o}{.}\PY{n}{split}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+['This', 'is', 'a', 'string!!']
+
+    \end{Verbatim}
+
+    \begin{itemize}
+\tightlist
+\item
+  \textbf{join}
+\end{itemize}
+
+    Join() function is the opposite of the split function. It takes a list
+of strings and add them up to one string. We can use a given string as a
+connector. Look at the following code:
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}122}]:} \PY{n}{a}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{this is}\PY{l+s+s2}{\PYZdq{}}
+          \PY{n}{b}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{a string}\PY{l+s+s2}{\PYZdq{}}
+          \PY{c+c1}{\PYZsh{} join the two strings with comma in between}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{, }\PY{l+s+s2}{\PYZdq{}}\PY{o}{.}\PY{n}{join}\PY{p}{(}\PY{p}{[}\PY{n}{a}\PY{p}{,}\PY{n}{b}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+this is, a string
 
     \end{Verbatim}
 
@@ -867,88 +1036,484 @@ paragraph.
 are different types of operands. The following lists will show many
 operands of different kinds.
 
-    \begin{verbatim}
-<caption>Arithmetic operators in Python</caption>
-<tbody>
-    <tr>
-        <th>Operator</th>
-        <th>Meaning</th>
-        <th>Example</th>
-    </tr>
-    <tr>
-        <td>+</td>
-        <td>Add two operands or unary plus</td>
-        <td>x + y<br />
-            +2</td>
-    </tr>
-    <tr>
-        <td>-</td>
-        <td>Subtract right operand from the left or unary minus</td>
-        <td>x - y<br />
-            -2</td>
-    </tr>
-    <tr>
-        <td>\*</td>
-        <td>Multiply two operands</td>
-        <td>x \* y</td>
-    </tr>
-    <tr>
-        <td>/</td>
-        <td>Divide left operand by the right one (always results into float)</td>
-        <td>x / y</td>
-    </tr>
-    <tr>
-        <td>%</td>
-        <td>Modulus - remainder of the division of left operand by the right</td>
-        <td>x % y (remainder of x/y)</td>
-    </tr>
-    <tr>
-        <td>//</td>
-        <td>Floor division - division that results into whole number adjusted to the left in the number line</td>
-        <td>x // y</td>
-    </tr>
-    <tr>
-        <td>**</td>
-        <td>Exponent - left operand raised to the power of right</td>
-        <td>x**y (x to the power y)</td>
-    </tr>
-</tbody>
+    I just copied and pasted these lists from this good sources:
+https://www.geeksforgeeks.org/basic-operators-python/
+
+    \textbf{Operator Description Syntax} \_\_\_\_\_\_\_\_
+
+\begin{verbatim}
+- Arithmetic Operators.
 \end{verbatim}
 
-    https://www.tutorialspoint.com/python/python\_basic\_operators.htm
+\begin{itemize}
+\item
+  {[}+{]} Addition: adds two operands x + y
+\item
+  {[}-{]} Subtraction: subtracts two operands x - y
+\item
+  {[}*{]} Multiplication: multiplies two operands x * y
+\item
+  {[}/{]} Division (float): divides the first operand by the second x /
+  y
+\item ~
+  \subsection{{[}//{]} Division (floor): divides the first operand by
+  the second x //
+  y}\label{division-floor-divides-the-first-operand-by-the-second-x-y}
 
-    \subsection{Python Lists and Dicts}\label{python-lists-and-dicts}
+  \begin{itemize}
+  \tightlist
+  \item
+    Relational Operators.
+  \end{itemize}
+\item
+  {[}\textgreater{}{]} Greater than: True if left operand is greater
+  than the right x \textgreater{} y
+\item
+  {[}\textless{}{]} Less than: True if left operand is less than the
+  right x \textless{} y
+\item
+  {[}=={]} Equal to: True if both operands are equal x == y
+\item
+  {[}!={]} Not equal to - True if operands are not equal x != y
+\item
+  {[}\textgreater{}={]} Greater than or equal to: True if left operand
+  is greater than or equal to the right x \textgreater{}= y
+\item ~
+  \subsection{{[}\textless{}={]} Less than or equal to: True if left
+  operand is less than or equal to the right x \textless{}=
+  y}\label{less-than-or-equal-to-true-if-left-operand-is-less-than-or-equal-to-the-right-x-y}
 
-    https://developers.google.com/edu/python/lists
+  \begin{itemize}
+  \tightlist
+  \item
+    Logical Operators
+  \end{itemize}
+\item
+  and Logical AND: True if both the operands are true x and y
+\item
+  or Logical OR: True if either of the operands is true x or y
+\item ~
+  \subsection{not Logical NOT: True if operand is false not
+  x}\label{not-logical-not-true-if-operand-is-false-not-x}
 
-    https://developers.google.com/edu/python/dict-files
+  \begin{itemize}
+  \tightlist
+  \item
+    Assignment Operators
+  \end{itemize}
+\item
+  = Assign value of right side of expression to left side operand x = y
+  + z
+\item
+  += Add AND: Add right side operand with left side operand and then
+  assign to left operand a+=b a=a+b
+\item
+  -= Subtract AND: Subtract right operand from left operand and then
+  assign to left operand a-=b a=a-b
+\item
+  \emph{= Multiply AND: Multiply right operand with left operand and
+  then assign to left operand a}=b a=a*b
+\item
+  /= Divide AND: Divide left operand with right operand and then assign
+  to left operand a/=b a=a/b
+\item
+  \%= Modulus AND: Takes modulus using left and right operands and
+  assign result to left operand a\%=b a=a\%b
+\item
+  //= Divide(floor) AND: Divide left operand with right operand and then
+  assign the value(floor) to left operand a//=b a=a//b
+\item
+  **= Exponent AND: Calculate exponent(raise power) value using operands
+  and assign value to left operand
+\end{itemize}
 
-    \subsection{Python Control flow}\label{python-control-flow}
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}130}]:} \PY{c+c1}{\PYZsh{} Examples of Arithmetic Operator}
+          \PY{n}{a} \PY{o}{=} \PY{l+m+mi}{9}
+          \PY{n}{b} \PY{o}{=} \PY{l+m+mi}{4}
+           
+          \PY{c+c1}{\PYZsh{} Addition of numbers}
+          \PY{n}{add} \PY{o}{=} \PY{n}{a} \PY{o}{+} \PY{n}{b}
+          \PY{c+c1}{\PYZsh{} Subtraction of numbers }
+          \PY{n}{sub} \PY{o}{=} \PY{n}{a} \PY{o}{\PYZhy{}} \PY{n}{b}
+          \PY{c+c1}{\PYZsh{} Multiplication of number }
+          \PY{n}{mul} \PY{o}{=} \PY{n}{a} \PY{o}{*} \PY{n}{b}
+          \PY{c+c1}{\PYZsh{} Division(float) of number }
+          \PY{n}{div1} \PY{o}{=} \PY{n}{a} \PY{o}{/} \PY{n}{b}
+          \PY{c+c1}{\PYZsh{} Division(floor) of number }
+          \PY{n}{div2} \PY{o}{=} \PY{n}{a} \PY{o}{/}\PY{o}{/} \PY{n}{b}
+          \PY{c+c1}{\PYZsh{} Modulo of both number}
+          \PY{n}{mod} \PY{o}{=} \PY{n}{a} \PY{o}{\PYZpc{}} \PY{n}{b}
+           
+          \PY{c+c1}{\PYZsh{} print results}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{add}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{sub}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{mul}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{div1}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{div2}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{mod}\PY{p}{)}
+          
+          
+          \PY{c+c1}{\PYZsh{} Examples of Relational Operators}
+          \PY{n}{a} \PY{o}{=} \PY{l+m+mi}{13}
+          \PY{n}{b} \PY{o}{=} \PY{l+m+mi}{33}
+           
+          \PY{c+c1}{\PYZsh{} a \PYZgt{} b is False}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{a} \PY{o}{\PYZgt{}} \PY{n}{b}\PY{p}{)}
+           
+          \PY{c+c1}{\PYZsh{} a \PYZlt{} b is True}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{a} \PY{o}{\PYZlt{}} \PY{n}{b}\PY{p}{)}
+           
+          \PY{c+c1}{\PYZsh{} a == b is False}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{a} \PY{o}{==} \PY{n}{b}\PY{p}{)}
+           
+          \PY{c+c1}{\PYZsh{} a != b is True}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{a} \PY{o}{!=} \PY{n}{b}\PY{p}{)}
+           
+          \PY{c+c1}{\PYZsh{} a \PYZgt{}= b is False}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{a} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{n}{b}\PY{p}{)}
+           
+          \PY{c+c1}{\PYZsh{} a \PYZlt{}= b is True}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{a} \PY{o}{\PYZlt{}}\PY{o}{=} \PY{n}{b}\PY{p}{)}
+          
+          
+          \PY{c+c1}{\PYZsh{} Examples of Logical Operator}
+          \PY{n}{a} \PY{o}{=} \PY{k+kc}{True}
+          \PY{n}{b} \PY{o}{=} \PY{k+kc}{False}
+           
+          \PY{c+c1}{\PYZsh{} Print a and b is False}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{a} \PY{o+ow}{and} \PY{n}{b}\PY{p}{)}
+           
+          \PY{c+c1}{\PYZsh{} Print a or b is True}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{a} \PY{o+ow}{or} \PY{n}{b}\PY{p}{)}
+           
+          \PY{c+c1}{\PYZsh{} Print not a is False}
+          \PY{n+nb}{print}\PY{p}{(}\PY{o+ow}{not} \PY{n}{a}\PY{p}{)}
+\end{Verbatim}
 
-    If statement.
 
-    \subsection{Python Branching}\label{python-branching}
+    \begin{Verbatim}[commandchars=\\\{\}]
+13
+5
+36
+2.25
+2
+1
+False
+True
+False
+True
+False
+True
+False
+True
+False
 
-    http://www.pythonforbeginners.com/control-flow-2/python-for-and-while-loops
+    \end{Verbatim}
+
+    \subsection{Python Data Structures}\label{python-data-structures}
+
+    The previous data types are so useful. They are used to hold the data we
+need to process. However, they are not enough. What about having a dozen
+of data? defining variables for each is redundant or even ridiculous!
+That is why python, as many other languages, provides data structures.
+
+    \subsubsection{Lists}\label{lists}
+
+    Lists are one of the simplest data types. You can think of it as a
+sequence of elements. In that context, we can say that strings are
+special type of lists as they are just a sequence of characters. In
+fact, both of them "strings and lists" shares many properties and
+functions. \textbf{keep in mind that lists should contain elements of
+the same type!!}
+
+    \paragraph{Playing with lists.}\label{playing-with-lists.}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}191}]:} \PY{c+c1}{\PYZsh{} to define a new list:}
+          \PY{n}{mylist} \PY{o}{=} \PY{p}{[}\PY{p}{]}
+          
+          \PY{c+c1}{\PYZsh{} you can also say:}
+          \PY{n}{mylist2} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{,}\PY{l+m+mi}{9}\PY{p}{]}
+          
+          \PY{c+c1}{\PYZsh{} add item to a list:}
+          \PY{n}{mylist}\PY{o}{.}\PY{n}{append}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{1: mylilst:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n}{mylist}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{}add list to list:}
+          \PY{n}{mylist}\PY{o}{.}\PY{n}{extend}\PY{p}{(}\PY{n}{mylist2}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{2: mylist:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{mylist}\PY{p}{)}
+          \PY{c+c1}{\PYZsh{} you can also use this shortcut:}
+          \PY{c+c1}{\PYZsh{}mylist += mylist2}
+          
+          \PY{c+c1}{\PYZsh{}you can insert items to any index:}
+          \PY{n}{mylist}\PY{o}{.}\PY{n}{insert}\PY{p}{(}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{3: mylist:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{mylist}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{}Remove the first item from the list whose value is x.}
+          \PY{n}{mylist}\PY{o}{.}\PY{n}{remove}\PY{p}{(}\PY{l+m+mi}{7}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{4: mylist}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n}{mylist}\PY{p}{)}
+          \PY{c+c1}{\PYZsh{}It is an error if there is no such item.}
+          \PY{c+c1}{\PYZsh{} the following line will produce an error:}
+          \PY{c+c1}{\PYZsh{}mylist.remove(10)}
+          
+          \PY{c+c1}{\PYZsh{} or you can delete element at a given index:}
+          \PY{k}{del} \PY{n}{mylist}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{5: mylist:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n}{mylist}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} you can use pop() function to do the same thing.}
+          \PY{c+c1}{\PYZsh{} However, passing no index to pop() will delete the last element of the array.}
+          \PY{n}{mylist}\PY{o}{.}\PY{n}{pop}\PY{p}{(}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{6: mylist:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{mylist}\PY{p}{)}
+          \PY{n}{mylist}\PY{o}{.}\PY{n}{pop}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{7: mylist:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n}{mylist}\PY{p}{)}
+          
+          
+          \PY{c+c1}{\PYZsh{} to clear the list \PYZdq{}remove all elements at once\PYZdq{}:}
+          \PY{n}{mylist}\PY{o}{.}\PY{n}{clear}\PY{p}{(}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{8: mylist:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n}{mylist}\PY{p}{)}
+          \PY{c+c1}{\PYZsh{} let us return our list back for further manipulations:}
+          \PY{n}{mylist} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{,}\PY{l+m+mi}{9}\PY{p}{]}
+          
+          \PY{c+c1}{\PYZsh{} as we have done with string, we can index lists as well.}
+          \PY{c+c1}{\PYZsh{} this will retrive elements in the odd indexes:}
+          \PY{n}{sublist} \PY{o}{=} \PY{n}{mylist}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{:}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{]}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{9: sublist:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n}{sublist}\PY{p}{)}
+          \PY{c+c1}{\PYZsh{}negative indexes applies to lists as well. BUT REVERSED:}
+          \PY{n}{sublist} \PY{o}{=} \PY{n}{mylist}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{:}\PY{l+m+mi}{0}\PY{p}{:}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{10: the first five elements reversed:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n}{sublist}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} you can reverse the list as follows:}
+          \PY{n}{mylist}\PY{o}{.}\PY{n}{reverse}\PY{p}{(}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{11: mylist:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{mylist}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{}you can sort the list as follows:}
+          \PY{n}{mylist}\PY{o}{.}\PY{n}{sort}\PY{p}{(}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{12: mylist:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{mylist}\PY{p}{)}
+          \PY{c+c1}{\PYZsh{} you can also sort with reverse as follows:}
+          \PY{c+c1}{\PYZsh{}mylist.sort(reverse=True)}
+          
+          \PY{c+c1}{\PYZsh{} you can get the number an elements is repeated in a list:}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{13: number of 5}\PY{l+s+s2}{\PYZsq{}}\PY{l+s+s2}{s:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n}{mylist}\PY{o}{.}\PY{n}{count}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} len() function can be used to get the number of elements:}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{14: number of elements in mylist:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n+nb}{len}\PY{p}{(}\PY{n}{mylist}\PY{p}{)}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} you can retrive the index of any element:}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{15: index of 5:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{mylist}\PY{o}{.}\PY{n}{index}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}}
+          \PY{c+c1}{\PYZsh{} The following methods are only applicable for numeric types:}
+          \PY{c+c1}{\PYZsh{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}\PYZhy{}}
+          \PY{c+c1}{\PYZsh{} sum a list:}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{16: sum of mylist elements:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n+nb}{sum}\PY{p}{(}\PY{n}{mylist}\PY{p}{)}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} max of list:}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{17: max of mylist:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n+nb}{max}\PY{p}{(}\PY{n}{mylist}\PY{p}{)}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} min of list:}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{18: min of mylist:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n+nb}{min}\PY{p}{(}\PY{n}{mylist}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+1: mylilst: [0]
+2: mylist: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+3: mylist: [0, 1, 2, 3, 4, 5, 6, 7, 7, 8, 9]
+4: mylist [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+5: mylist: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+6: mylist: [1, 2, 3, 4, 5, 6, 7, 8]
+7: mylist: [2, 3, 4, 5, 6, 7, 8]
+8: mylist: []
+9: sublist: [1, 3, 5, 7, 9]
+10: the first five elements reversed: [5, 4, 3, 2, 1]
+11: mylist: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+12: mylist: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+13: number of 5's: 1
+14: number of elements in mylist: 10
+15: index of 5: 5
+16: sum of mylist elements: 45
+17: max of mylist: 9
+18: min of mylist: 0
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}192}]:} \PY{c+c1}{\PYZsh{} range function usage}
+          \PY{c+c1}{\PYZsh{} get list from 0,10}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+range(0, 10)
+
+    \end{Verbatim}
+
+    \subsubsection{Dictionaries}\label{dictionaries}
+
+    It is a useful data structure. The different between lists and
+dictionaries is that lists are indexed by integers while dictionaries
+are indexed by sort of keys!
+
+    \paragraph{Playing with dictionaries}\label{playing-with-dictionaries}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}193}]:} \PY{c+c1}{\PYZsh{} initialize a dictionary:}
+          \PY{n+nb}{dict} \PY{o}{=} \PY{p}{\PYZob{}}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{name}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{KFUPM}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{age}\PY{l+s+s1}{\PYZsq{}}\PY{p}{:}\PY{l+m+mi}{55}\PY{p}{\PYZcb{}}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{1: dict:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n+nb}{dict}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} get only keys:}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{2: dict keys:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n+nb}{dict}\PY{o}{.}\PY{n}{keys}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} get only values:}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{3: dict values:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n+nb}{dict}\PY{o}{.}\PY{n}{values}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} update dict:}
+          \PY{n+nb}{dict}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{name}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{King Fahd University for Petroleum and Minerals}\PY{l+s+s2}{\PYZdq{}}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{4:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n+nb}{dict}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} add new key\PYZhy{}value element:}
+          \PY{n+nb}{dict}\PY{p}{[}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{short name}\PY{l+s+s2}{\PYZdq{}}\PY{p}{]}\PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{KFUPM}\PY{l+s+s2}{\PYZdq{}}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{5:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n+nb}{dict}\PY{p}{)}
+          
+          \PY{c+c1}{\PYZsh{} delete a key:}
+          \PY{n+nb}{dict}\PY{o}{.}\PY{n}{pop}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{age}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{k+kc}{None}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{6:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n+nb}{dict}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+1: dict: \{'name': 'KFUPM', 'age': 55\}
+2: dict keys: dict\_keys(['name', 'age'])
+3: dict values: dict\_values(['KFUPM', 55])
+4: \{'name': 'King Fahd University for Petroleum and Minerals', 'age': 55\}
+5: \{'name': 'King Fahd University for Petroleum and Minerals', 'age': 55, 'short name': 'KFUPM'\}
+6: \{'name': 'King Fahd University for Petroleum and Minerals', 'short name': 'KFUPM'\}
+
+    \end{Verbatim}
+
+    \subsubsection{accessing list elements}\label{accessing-list-elements}
+
+    You can access list elements using loops. We will talk about loops later
+in details. However, we will use it here to access list elements.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}194}]:} \PY{c+c1}{\PYZsh{}you can access list elements as follows:}
+          
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{list elements are:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+          \PY{k}{for} \PY{n}{elem} \PY{o+ow}{in} \PY{n}{mylist}\PY{p}{:}
+              \PY{n+nb}{print}\PY{p}{(}\PY{n}{elem}\PY{p}{,} \PY{n}{end}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{, }\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+list elements are:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}197}]:} \PY{c+c1}{\PYZsh{} also, you can access list elements by index.}
+          \PY{c+c1}{\PYZsh{} we will use range() function to generage iterable integers.}
+          \PY{c+c1}{\PYZsh{} its usage is similar to list indexes.}
+          \PY{c+c1}{\PYZsh{} range(start, stop, step) with the same default values of list inexing.}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{elements of range() function:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+          \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{:}
+              \PY{c+c1}{\PYZsh{} let us print numbers of range function:}
+              \PY{n+nb}{print}\PY{p}{(}\PY{n}{i}\PY{p}{,} \PY{n}{end}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{, }\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{p}{)}    
+          \PY{c+c1}{\PYZsh{} now, we can access list elements as follows:}
+          \PY{c+c1}{\PYZsh{} multiply each list element by 2:}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{doubled lists elements:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+          \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{mylist}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+              \PY{n}{mylist}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{*}\PY{o}{=} \PY{l+m+mi}{2}
+          
+          
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{mylist}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+elements of range() function:
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 
+doubled lists elements:
+[0, 8, 16, 24, 32, 40, 48, 56, 64, 72]
+
+    \end{Verbatim}
+
+    \subsection{Exercises}\label{exercises}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}201}]:} \PY{c+c1}{\PYZsh{} use the following line to ask some input from the user.}
+          
+          \PY{n}{x} \PY{o}{=} \PY{n+nb}{input}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{enter some input: }\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{you entered:}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+enter some input: Hello world of python! :)
+you entered: Hello world of python! :)
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor} }]:} \PY{c+c1}{\PYZsh{} Write a Python program to remove duplicates from a list.}
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        \PY{c+c1}{\PYZsh{} Write a Python program to count the number of characters (character frequency)}
+        \PY{c+c1}{\PYZsh{}in a string. and write them to a dictionary}
+        \PY{c+c1}{\PYZsh{}Sample String : google.com\PYZsq{}}
+        \PY{c+c1}{\PYZsh{}Expected Result : \PYZob{}\PYZsq{}o\PYZsq{}: 3, \PYZsq{}g\PYZsq{}: 2, \PYZsq{}.\PYZsq{}: 1, \PYZsq{}e\PYZsq{}: 1, \PYZsq{}l\PYZsq{}: 1, \PYZsq{}m\PYZsq{}: 1, \PYZsq{}c\PYZsq{}: 1\PYZcb{}}
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        \PY{c+c1}{\PYZsh{}Write a Python program to get a single string from two given strings.}
+        \PY{c+c1}{\PYZsh{}separated by a space and swap the first two characters of each string!}
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        \PY{c+c1}{\PYZsh{} Write a Python program to sum all the items in a list}
+        \PY{c+c1}{\PYZsh{} DO NOT USE THE SUM() FUNCTION BUT USE IT TO COMPARE WITH YOUR RESUTS}
+\end{Verbatim}
+
 
     \subsection{Resources}\label{resources}
 
-    \begin{itemize}
-\item
-  \href{https://en.wikipedia.org/wiki/George_Boole}{George Boole}, Link:
-  https://en.wikipedia.org/wiki/George\_Boole
-\item
-  \href{https://docs.python.org/2/library/stdtypes.html}{Python official
-  documentation}, Link: https://docs.python.org/2/library/stdtypes.html
-\item
-  \href{https://www.tutorialspoint.com/python3/python_numbers.htm}{Mathematical
-  operations on Numeric Types}, Link:
-  https://www.tutorialspoint.com/python3/python\_numbers.htm
-\item
-  \href{https://www.programiz.com/python-programming/modules/math}{Python
-  Mathematical functions},
-  Link:https://www.programiz.com/python-programming/modules/math
-\end{itemize}
+    1- https://www.pythoncentral.io/pythons-range-function-explained/
+
+2- https://docs.python.org/3/tutorial/datastructures.html
+
+3- https://www.tutorialspoint.com/python/python\_loops.htm
+
+4- https://developers.google.com/edu/python/strings
 
 
     % Add a bibliography block to the postdoc
